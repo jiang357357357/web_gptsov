@@ -51,7 +51,7 @@ make_modle.start_clent()
 # 
 
 # 切换模型
-@app.get("/switch_model")
+@app.post("/switch_model")
 async def switch_model(item: SwitchItem):
     # 从请求体获取信息
     item_id = item.id
@@ -64,7 +64,7 @@ async def switch_model(item: SwitchItem):
             "message": "服务跑得飞快～别怀疑我的能力！"}
 
 # 获取声音
-@app.get("/get_music")
+@app.post("/get_music")
 async def switch_model(item: DataItem):
     # 从请求体获取信息
     item_emotion = item.emotion
